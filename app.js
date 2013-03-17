@@ -4,12 +4,18 @@
  */
 
 var express = require('express')
+  , Sequelize = require('sequelize')
   , routes = require('./routes')
   , user = require('./routes/user')
   , http = require('http')
   , path = require('path');
 
 var app = express();
+
+//Database
+var sequelize = new Sequelize('database', 'username', 'password', {
+  dialect: 'postgres'
+});
 
 //Configuration
 app.configure(function(){
