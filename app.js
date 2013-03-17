@@ -11,6 +11,7 @@ var express = require('express')
 
 var app = express();
 
+//Configuration
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
   app.set('views', __dirname + '/views');
@@ -27,8 +28,13 @@ app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
+//Routes
 app.get('/', routes.index);
 app.get('/users', user.list);
+
+app.get('/', function(req, res) {
+  res.send("hello world");
+});
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
