@@ -11,7 +11,8 @@
     "jade": "*",
     "pg": "0.6.x",
     "sequelize": "1.6.x",
-    "less": "*"
+    "less": "*",
+    "backbone": "~0.9.10"
   },
   "engines": {
     "node": "0.8.x",
