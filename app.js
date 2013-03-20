@@ -34,7 +34,7 @@ app.get('/', routes.index);
 app.get('/users', user.list);
 
 app.get('/', function(req, res) {
-  res.send("hello world");
+  res.send('id: ' + req.query["id"]);
 });
 
 http.createServer(app).listen(app.get('port'), function(){

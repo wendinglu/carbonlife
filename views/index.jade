@@ -2,20 +2,23 @@ extends layout
 
 block content
 	h1= title
-	h4= subtitle
-
+	h2= subtitle
 	.container
-		form
+		form#co2-form(name='co2')
 			fieldset
-				input(type='text', class='span3', placeholder='Enter CO2 emissions')
-				select(class='span2')
+				label
+					h4 How much is
+				input.span3#co2-input(name='amount', type='text', placeholder='Enter CO2 emissions')
+				select.span2
 					option pounds
 					option kilograms
 					option tons
 					option metric tonnes
 					option Gigatonnes
 				label of Carbon Dioxide
-	
+				button.btn.btn-primary.btn-large(type='button') Show Me
+		div#test-field
+			p Hello
 	script(src='http://code.jquery.com/jquery.js')
 	script(src='/js/bootstrap.min.js')
 	script(src='/js/index.js')
