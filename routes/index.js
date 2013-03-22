@@ -5,7 +5,7 @@
 
 exports.index = function(req, res){
   res.render('index', {
-  	title: 'What does my carbon footprint mean?',
+  	title: 'How much carbon is this?',
   	query: req.query["amount"]
   });
 };

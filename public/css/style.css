@@ -10,3 +10,8 @@ a {
 .hidden {
 	display: none;
 }
+
+li.results {
+	list-style-type: none;
+	list-style-position: inside;
+}
