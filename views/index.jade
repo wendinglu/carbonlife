@@ -1,8 +1,8 @@
 extends layout
 
 block content
+	h1#params.hidden= query
 	h1= title
-	h2= subtitle
 	.container
 		form#co2-form(name='co2')
 			fieldset
@@ -10,13 +10,18 @@ block content
 					h4 How much is
 				input.span3#co2-input(name='amount', type='text', placeholder='Enter CO2 emissions')
 				select.span2
-					option pounds
 					option kilograms
-					option tons
 					option metric tonnes
+					option Megatonnes
 					option Gigatonnes
+					option pounds
+					option tons
 				label of Carbon Dioxide
-				button.btn.btn-primary.btn-large(type='button') Show Me
+				button#co2-btn.btn.btn-primary.btn-large(type='button', onclick='submit()') Show Me
+
+		//CO2 equivs
+		#results.hidden
+			p sup naggers
 		div#test-field
 			p Hello
 	script(src='http://code.jquery.com/jquery.js')

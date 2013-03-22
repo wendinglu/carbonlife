@@ -6,6 +6,6 @@
 exports.index = function(req, res){
   res.render('index', {
   	title: 'What does my carbon footprint mean?',
-  	subtitle: req.query["id"]
+  	query: req.query["amount"]
   });
 };
