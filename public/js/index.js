@@ -4,8 +4,6 @@ function inputFieldListener() {
 	var numericString = parseFloat(input.value);
 	if (numericString) input.value = numericString;
 	else input.value = "";
-
-	$("#test-field").text(numericString);
 }
 
 function getURLParameter(name) {
