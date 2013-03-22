@@ -9,21 +9,21 @@ block content
 				label
 					h4 How much is
 				input.span3#co2-input(name='amount', type='text', placeholder='Enter CO2 emissions')
-				select.span2
-					option kilograms
-					option metric tonnes
-					option Megatonnes
-					option Gigatonnes
-					option pounds
-					option tons
-				label of Carbon Dioxide
+				//
+					select#co2-select.span2
+						option kilograms
+						option metric tonnes
+						option kilotonnes
+						option Megatonnes
+						option Gigatonnes
+						option pounds
+						option tons
+				label kilograms of Carbon Dioxide
 				button#co2-btn.btn.btn-primary.btn-large(type='button', onclick='submit()') Show Me
 
 		//CO2 equivs
 		#results.hidden
-			p sup naggers
 		div#test-field
-			p Hello
 	script(src='http://code.jquery.com/jquery.js')
 	script(src='/js/bootstrap.min.js')
 	script(src='/js/index.js')
