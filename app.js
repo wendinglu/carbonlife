@@ -11,6 +11,16 @@ var express = require('express')
 
 var app = express();
 
+//Database
+var pg = require('pg');
+
+pg.connect(process.env.DATABASE_URL, function(err, client) {
+  var query = client.query('SELECT * FROM pgdb');
+
+  query.on('row', function(row) {
+    console.log(JSON.stringify(row));
+  });
+});
 
 //Configuration
 app.configure(function(){
